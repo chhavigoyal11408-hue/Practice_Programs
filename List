@@ -1,0 +1,229 @@
+
+# Write a program to create a list of 5 integers and display the list items.
+# Access individual elements through index.
+
+numbers = [10, 20, 30, 40, 50]
+
+print("List:", numbers)
+
+print("First element:", numbers[0])
+print("Second element:", numbers[1])
+print("Third element:", numbers[2])
+print("Fourth element:", numbers[3])
+print("Fifth element:", numbers[4])
+List: [10, 20, 30, 40, 50]
+First element: 10
+Second element: 20
+Third element: 30
+Fourth element: 40
+Fifth element: 50
+# Write a program to append a new item to the end of the list.
+
+numbers = [10, 20, 30, 40, 50]
+
+print("Original list:", numbers)
+
+numbers.append(60)
+
+print("List after appending:", numbers)
+Original list: [10, 20, 30, 40, 50]
+List after appending: [10, 20, 30, 40, 50, 60]
+# Write a program to reverse the order of the items in the list.
+
+numbers = [10, 20, 30, 40, 50]
+
+print("Original list:", numbers)
+
+numbers.reverse()
+
+print("Reversed list:", numbers)
+Original list: [10, 20, 30, 40, 50]
+Reversed list: [50, 40, 30, 20, 10]
+# Write a program to print the number of occurrences of a specified element in a list.
+
+numbers = [10, 20, 10, 30, 10, 40, 50]
+
+num = int(input("Enter the element to count: "))
+
+print("Number of occurrences:", numbers.count(num))
+Number of occurrences: 3
+# Write a program to append the items of list1 to list2 in the front.
+
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+
+list2 = list1 + list2
+
+print("List2:", list2)
+List2: [1, 2, 3, 4, 5, 6]
+# Write a program to insert a new item before the second element in an existing list.
+
+numbers = [10, 20, 30, 40, 50]
+
+numbers.insert(1, 15)
+
+print("List after inserting:", numbers)
+List after inserting: [10, 15, 20, 30, 40, 50]
+# Write a program to remove the item from a specified index in a list.
+
+numbers = [10, 20, 30, 40, 50]
+
+index = int(input("Enter the index to remove: "))
+
+numbers.pop(index)
+
+print("List after removing:", numbers)
+List after removing: [10, 30, 40, 50]
+# Write a program to remove the first occurrence of a specified element from a list.
+
+numbers = [10, 20, 30, 20, 40, 50]
+
+num = int(input("Enter the element to remove: "))
+
+numbers.remove(num)
+
+print("List after removing:", numbers)
+List after removing: [10, 30, 20, 40, 50]
+# Accept 20 values from user and save it in list.
+# Perform following operations on it
+# a) Count similar elements of list and print their index value
+# b) Count even and odd values of list
+# c) Count positive and negative values of list
+
+numbers = []
+
+for i in range(20):
+    num = int(input("Enter a number: "))
+    numbers.append(num)
+
+print("List:", numbers)
+
+# a) Count similar elements and print their index values
+
+for i in range(20):
+    if numbers.count(numbers[i]) > 1:
+        if numbers.index(numbers[i]) == i:
+            print(numbers[i], "occurs", numbers.count(numbers[i]), "times")
+            print("Index:", end=" ")
+
+            for j in range(20):
+                if numbers[j] == numbers[i]:
+                    print(j, end=" ")
+
+            print()
+
+# b) Count even and odd values
+
+even = 0
+odd = 0
+
+for num in numbers:
+    if num % 2 == 0:
+        even = even + 1
+    else:
+        odd = odd + 1
+
+print("Even values:", even)
+print("Odd values:", odd)
+
+# c) Count positive and negative values
+
+positive = 0
+negative = 0
+
+for num in numbers:
+    if num > 0:
+        positive = positive + 1
+    elif num < 0:
+        negative = negative + 1
+
+print("Positive values:", positive)
+print("Negative values:", negative)
+List: [1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+3 occurs 18 times
+Index: 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Even values: 1
+Odd values: 19
+Positive values: 20
+Negative values: 0
+# Accept 10 values from user and save it in list.
+# Perform following operations on it
+# a) Sort list in ascending order using sorted() function and display sorted list
+# b) Sort list in descending order using sort() function
+# c) Display length of list
+
+numbers = []
+
+for i in range(10):
+    num = int(input("Enter a number: "))
+    numbers.append(num)
+
+# a) Sort list in ascending order using sorted()
+
+ascending = sorted(numbers)
+print("Ascending order:", ascending)
+
+# b) Sort list in descending order using sort()
+
+numbers.sort(reverse=True)
+print("Descending order:", numbers)
+
+# c) Display length of list
+
+print("Length of list:", len(numbers))
+Ascending order: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Descending order: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Length of list: 10
+# Accept two lists from user and merge them using + in a single list
+
+list1 = []
+list2 = []
+
+print("Enter 5 values for first list:")
+for i in range(5):
+    num = int(input("Enter a number: "))
+    list1.append(num)
+
+print("Enter 5 values for second list:")
+for i in range(5):
+    num = int(input("Enter a number: "))
+    list2.append(num)
+
+list3 = list1 + list2
+
+print("First list:", list1)
+print("Second list:", list2)
+print("Merged list:", list3)
+Enter 5 values for first list:
+Enter 5 values for second list:
+First list: [1, 2, 4, 5, 6]
+Second list: [1, 2, 3, 4, 5]
+Merged list: [1, 2, 4, 5, 6, 1, 2, 3, 4, 5]
+# An acronym is a word formed by taking the first letters of the words in a phrase.
+# Write a program that allows the user to type in a phrase and then outputs
+# the acronym for that phrase. The acronym should be in uppercase.
+
+phrase = input("Enter a phrase: ")
+
+words = phrase.split()
+acronym = ""
+
+for word in words:
+    acronym = acronym + word[0]
+
+print("Acronym:", acronym.upper())
+Acronym: H
+# Write a program to print the abbreviation of a month, given its number.
+
+month = int(input("Enter month number: "))
+
+months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+          "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+if month >= 1 and month <= 12:
+    print("Month number:", month)
+    print("Month abbreviation:", months[month - 1])
+else:
+    print("Invalid month number")
+Month number: 4
+Month abbreviation: Apr
