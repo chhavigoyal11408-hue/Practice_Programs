@@ -1,0 +1,96 @@
+
+# Write a program to count the number of upper and lower case letters in a String.
+
+string = input("Enter a string: ")
+
+upper = 0
+lower = 0
+
+for char in string:
+    if char.isupper():
+        upper = upper + 1
+    elif char.islower():
+        lower = lower + 1
+
+print("Number of uppercase letters:", upper)
+print("Number of lowercase letters:", lower)
+Number of uppercase letters: 1
+Number of lowercase letters: 3
+# Write a program that will check whether a given String is Palindrome or not.
+
+string = input("Enter a string: ")
+
+reverse = string[::-1]
+
+if string == reverse:
+    print("The string is palindrome")
+else:
+    print("The string is not palindrome")
+The string is not palindrome
+# Given a string, return a new string made of n copies of the first 2 chars of the original string where n is the length of the string. The string length will be >=2. If input is "Wipro" then output should be "Wiwiwiwiwi"
+
+string = input("Enter a string: ")
+
+first_two = string[:2]
+n = len(string)
+
+result = first_two * n
+
+print("Output:", result)
+Output: HiHiHiHi
+# Given a string, if the first or last character is 'x', return the string without those 'x' character, else return the string unchanged. If the input is "xHix", then output is "Hi".
+
+string = input("Enter a string: ")
+
+if string[0] == "x":
+    string = string[1:]
+
+if string[-1] == "x":
+    string = string[:-1]
+
+print("Output:", string)
+Output: Hiii
+# Given a string and an integer n, return a string made of n repetitions of the last n characters of the string.
+
+string = input("Enter a string: ")
+n = int(input("Enter n: "))
+
+last_characters = string[-n:]
+
+result = last_characters * n
+
+print("Output:", result)
+Output: 7878787878787878
+#Regular Expression:
+# Create a Regular Expression and implement the following
+# a) Recognize bat, bit, but, hat, hit or hut
+# b) Match any pair of words separated by a single space
+# c) Match any word and single letter separated by comma and space
+
+import re
+
+# a)
+string = input("Enter string: ")
+
+if re.match("^(bat|bit|but|hat|hit|hut)$", string):
+    print("a) Matched")
+else:
+    print("a) Not matched")
+
+
+# b)
+string = input("Enter first and last name: ")
+
+if re.match("^[A-Za-z]+ [A-Za-z]+$", string):
+    print("b) Matched")
+else:
+    print("b) Not matched")
+
+
+# c)
+string = input("Enter last name and first initial: ")
+
+if re.match("^[A-Za-z]+, [A-Za-z]$", string):
+    print("c) Matched")
+else:
+    print("c) Not matched")
