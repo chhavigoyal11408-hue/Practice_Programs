@@ -1,0 +1,126 @@
+
+# Create a 3×3 NumPy array of all True
+
+import numpy as np
+
+array = np.full((3, 3), True)
+
+print(array)
+[[ True  True  True]
+ [ True  True  True]
+ [ True  True  True]]
+# Create a 1D array of 10 evenly spaced values between 5 and 50
+
+import numpy as np
+
+array = np.linspace(5, 50, 10)
+
+print(array)
+[ 5. 10. 15. 20. 25. 30. 35. 40. 45. 50.]
+# Convert a Python list into a NumPy array
+
+import numpy as np
+
+my_list = [10, 20, 30, 40, 50]
+
+my_array = np.array(my_list)
+
+print(my_array)
+[10 20 30 40 50]
+# Reverse a 1D NumPy array
+
+import numpy as np
+
+array = np.array([10, 20, 30, 40, 50])
+
+reverse = array[::-1]
+
+print(reverse)
+[50 40 30 20 10]
+# Create a 3×3 identity matrix
+
+import numpy as np
+
+matrix = np.eye(3)
+
+print(matrix)
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+# Create a 4×4 array and extract its first row and last column
+
+import numpy as np
+
+array = np.array([
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 16]
+])
+
+first_row = array[0]
+last_column = array[:, -1]
+
+print("First row:", first_row)
+print("Last column:", last_column)
+First row: [1 2 3 4]
+Last column: [ 4  8 12 16]
+# Write a code to Create a 4×4 NumPy array and extract the first two rows and first two columns.
+
+import numpy as np
+
+array = np.array([
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 16]
+])
+
+result = array[:2, :2]
+
+print(result)
+[[1 2]
+ [5 6]]
+# Perform arithmetic operations on two NumPy arrays element-wise
+
+import numpy as np
+
+array1 = np.array([10, 20, 30])
+array2 = np.array([2, 4, 5])
+
+print("Addition:", array1 + array2)
+print("Subtraction:", array1 - array2)
+print("Multiplication:", array1 * array2)
+print("Division:", array1 / array2)
+Addition: [12 24 35]
+Subtraction: [ 8 16 25]
+Multiplication: [ 20  80 150]
+Division: [5. 5. 6.]
+# Write a code to compute the dot product of two NumPy arrays
+
+import numpy as np
+
+array1 = np.array([1, 2, 3])
+array2 = np.array([4, 5, 6])
+
+dot_product = np.dot(array1, array2)
+
+print("Dot product:", dot_product)
+Dot product: 32
+# Compute the mean, median, and standard deviation of a NumPy array
+
+import numpy as np
+
+array = np.array([10, 20, 30, 40, 50])
+
+mean = np.mean(array)
+median = np.median(array)
+standard_deviation = np.std(array)
+
+print("Mean:", mean)
+print("Median:", median)
+print("Standard Deviation:", standard_deviation)
+Mean: 30.0
+Median: 30.0
+Standard Deviation: 14.142135623730951
+ 
